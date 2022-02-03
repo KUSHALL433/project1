@@ -1,0 +1,278 @@
+/*global styles*/
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+h1 {
+  font-size: 2.6rem;
+  font-family: "Supermercado One", cursive;
+}
+li,
+button,
+label,
+input,
+p {
+  font-size: 2rem;
+}
+h2 {
+  font-size: 4.8rem;
+}
+h3 {
+  font-size: 2.5rem;
+}
+h4,
+h5 {
+  font-size: 2.1rem;
+}
+a {
+  color: white;
+  text-decoration: none;
+}
+button {
+  padding: 2rem 6rem;
+  background: #4c6e97;
+  border: none;
+  color: white;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: background 0.5s ease-in-out;
+  animation: cloudAnimation 2s infinite alternate;
+}
+button:hover {
+  background: #27394e;
+  font-size: 2.4rem;
+}
+/*Nav Section with hero*/
+.main-head {
+  background: rgb(3, 3, 39);
+  color: white;
+  position: sticky;
+  top: 0px;
+  z-index: 3;
+}
+nav {
+  min-height: 10vh;
+  display: flex;
+  width: 90%;
+  margin: auto;
+  padding: 2rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+nav ul {
+  display: flex;
+  flex: 1 1 40rem;
+  justify-content: space-around;
+  align-items: center;
+  list-style: none;
+}
+
+#logo {
+  flex: 2 1 40rem;
+}
+.hero {
+  min-height: 90vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.2), transparent),
+    url("/pexels-sam-kolder-2387873.jpg");
+  background-position: center;
+  background-size: cover;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.hero h3 {
+  padding: 1.5rem;
+}
+/*Locations Section*/
+
+#locations {
+  min-height: 190vh;
+  background: url("/pexels-rangan-sarkar-3951730.jpg");
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  color: white;
+  position: relative;
+}
+.locations-head {
+  width: 90%;
+  margin: auto;
+}
+.locations-head h2 {
+  padding: 1rem 0rem;
+  text-decoration: underline;
+}
+.locations-head h3 {
+  padding: 4rem 0rem;
+  background: linear-gradient(black, lightslategray);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-decoration: wavy;
+}
+.cloud {
+  position: absolute;
+  top: 0%;
+  right: 15%;
+}
+.moving-cloud-1 {
+  animation: cloudAni 3s infinite alternate ease-in-out;
+}
+.moving-cloud-2 {
+  background: linear-gradient(black, lightslategray);
+  top: 50%;
+  z-index: -1;
+  opacity: 0.5;
+}
+
+@keyframes cloudAnimation {
+  0% {
+    background: lightblue;
+  }
+  25% {
+    background: rgb(35, 98, 119);
+  }
+  100% {
+    background: rgb(99, 35, 119);
+  }
+}
+@keyframes cloudAni {
+  from {
+    transform: translate(10%, -10%);
+  }
+  to {
+    transform: translate(0%, 0%);
+  }
+}
+
+/*Benefits section*/
+#benefits-head {
+  background: #343c44;
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+.cards {
+  width: 95%;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 70vh;
+  flex-wrap: wrap;
+  background: rgb(3, 3, 39);
+  color: white;
+}
+.card {
+  text-align: center;
+  flex: 1 1 25rem;
+  min-height: 40vh;
+  margin: 2rem 5rem;
+  box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.3), 0px 20px 20px rgba(0, 0, 0, 0.3);
+}
+.cards img {
+  max-width: 15%;
+  margin: 2rem;
+}
+.card h4 {
+  padding: 3rem;
+}
+.card-icon {
+  background: #27394e;
+}
+#contact {
+  min-height: 150vh;
+  background: url("/pexels-andre-furtado-3572740.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.form-wrapper {
+  background: rgba(19, 28, 39, 0.8);
+  color: white;
+  border-radius: 20px;
+}
+#form-head {
+  text-align: center;
+  padding: 1rem;
+}
+.name-form,
+.email-form {
+  text-align: center;
+  margin: 0.5rem;
+}
+.form-wrapper label {
+  margin: 0rem 1rem;
+}
+.form-wrapper button {
+  width: 100%;
+  padding: 2rem;
+  margin-top: 2rem;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+footer {
+  color: black;
+  background: linear-gradient(rgb(8, 56, 4), rgb(45, 238, 45));
+}
+.footer-wrapper {
+  display: flex;
+  padding: 2rem;
+  width: 90%;
+  margin: auto;
+  min-height: 10vh;
+  align-items: center;
+  flex-wrap: wrap;
+}
+footer h5 {
+  flex: 1 1 40rem;
+}
+.footer-wrapper ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+  flex: 1 1 40rem;
+}
+.footer-wrapper img {
+  max-width: 15%;
+}
+/*Media Queries*/
+@media screen and (max-width: 932px) {
+  html {
+    font-size: 45%;
+  }
+  nav {
+    text-align: center;
+  }
+  #logo {
+    padding: 2rem;
+    text-align: center;
+  }
+  .cloud {
+    pointer-events: none;
+  }
+  .form-wrapper {
+    width: 100%;
+  }
+  footer {
+    text-align: center;
+  }
+  footer h5 {
+    padding-bottom: 2rem;
+  }
+}
